@@ -12,8 +12,8 @@ partię X z wariantem gdzie nie głosujemy na nic.
 Na wykresach pokazana jest wartość oczekiwana tego jak głos wpłynie
 na przydział mandatów w okręgu, wyliczona jako średnia z 10000 symulacji.
 
-Dane wzięte z:
-[pogonimypis.pl](https://pogonimypis.pl/).
+Dane (poparcia partii i odchylenia) wzięte od
+[pogonimypis.pl](https://pogonimypis.pl/) i [wybierztak.py](https://wybierztak.pl/).
 
 Uwaga: w analizach dla uproszczenia nie uwzględniam możliwości, że TD nie przeskakuje
 progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sejmu.
