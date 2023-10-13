@@ -9,6 +9,9 @@ partię X z wariantem gdzie nie głosujemy na nic.
 
 Na wykresach pokazana jest wartość oczekiwana tego jak głos wpłynie
 na przydział mandatów w okręgu, wyliczona jako średnia z 10000 symulacji.
+
+Dane wzięte z:
+[pogonimypis.pl](https://pogonimypis.pl/) (A dokładnie [stąd](https://github.com/krozkwitalski/wybory/blob/master/symulacja.ts).)
 ## Legnica
 ```
 PIS     38.8 +- 1.2

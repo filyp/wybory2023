@@ -1,8 +1,8 @@
 # %%
-import numpy as np
 import json
 
 import matplotlib.pyplot as plt
+import numpy as np
 
 # %%
 # load okregi.json
@@ -58,8 +58,9 @@ def get_avg_mandate_assignments(unnormalized_sims, num_mandates):
 
 
 # %%
-max_val = 0.06
+max_val = 0.042
 plt.ioff()
+# max_val_total = 0
 
 markdown = """
 Jak głos oddany na pewną partę wpływa na przydział mandatów w okręgu.
@@ -120,8 +121,9 @@ for okreg_name, o in data.items():
     # global title is okreg name
     fig.suptitle(okreg_name)
 
-    # # # use common scale for all plots, symmetrical
-    # # max_val = max(abs(change).max() for change in changes.values())
+    # # use common scale for all plots, symmetrical
+    # local_max_val = max(abs(change).max() for change in changes.values())
+    # max_val_total = max(max_val_total, local_max_val)
 
     for i, (party_name, change) in enumerate(changes.items()):
         axs[i].bar(party_names, change, color=party_colors)
@@ -142,3 +144,6 @@ filename = "README.md"
 
 with open(filename, "w") as f:
     f.write(markdown)
+
+
+# print(max_val_total)
