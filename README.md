@@ -1,7 +1,7 @@
 
 # Wzmocnij swój głos
 
-Jak głos oddany na daną partę wpływa na przydział mandatów w okręgu:
+Jak głos oddany na daną partię wpływa na przydział mandatów w okręgu:
 
 Dla każdego okręgu przeprowadzane jest 10000 symulacji, losując wyniki
 wg podanych średnich i odchyleń standardowych.
