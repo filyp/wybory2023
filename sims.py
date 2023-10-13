@@ -60,7 +60,7 @@ def get_avg_mandate_assignments(unnormalized_sims, num_mandates):
 # %%
 max_val = 0.044
 plt.ioff()
-# max_val_total = 0
+max_val_total = 0
 
 markdown = """
 # Wzmocnij swój głos
@@ -84,7 +84,10 @@ progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sej
 
 Uwaga2: wyniki zależą od tego jakie odchylenie standardowe przyjmujemy dla poparcia
 partii. [Tutaj](half.md) alternatywne wyniki, gdy przyjmiemy 2x mniejsze odchylenie.
-[Tutaj](double.md) gdy 2x większe.
+[Tutaj](double.md) gdy 2x większe. W skrócie, jeśli uważasz, że niepewność co do
+poparcia jest większa niż tu przyjęta, to bardziej warto głosowac na ulubioną partię
+a nie strategicznie.
+
 """
 
 for okreg_name, o in data.items():
@@ -130,9 +133,9 @@ for okreg_name, o in data.items():
     # global title is okreg name
     fig.suptitle(okreg_name)
 
-    # # use common scale for all plots, symmetrical
-    # local_max_val = max(abs(change).max() for change in changes.values())
-    # max_val_total = max(max_val_total, local_max_val)
+    # use common scale for all plots, symmetrical
+    local_max_val = max(abs(change).max() for change in changes.values())
+    max_val_total = max(max_val_total, local_max_val)
 
     for i, (party_name, change) in enumerate(changes.items()):
         axs[i].bar(party_names, change, color=party_colors)
@@ -169,4 +172,4 @@ with open(filename, "w") as f:
     f.write(markdown)
 
 
-# print(max_val_total)
+print(max_val_total)

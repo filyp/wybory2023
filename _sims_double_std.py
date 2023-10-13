@@ -58,7 +58,7 @@ def get_avg_mandate_assignments(unnormalized_sims, num_mandates):
 
 
 # %%
-max_val = 0.085
+max_val = 0.045
 plt.ioff()
 max_val_total = 0
 
