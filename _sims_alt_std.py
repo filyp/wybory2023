@@ -95,7 +95,7 @@ for okreg_name, o in data.items():
 
     markdown += f"```\n"
     for party_name in party_names:
-        markdown += f"{party_name:6}  {o['procentyWOkreguSrednia'][party_name]:4.1f} ± {o['odchylenieWOkregu'][party_name]/2:3.1f}\n"
+        markdown += f"{party_name:6}  {o['procentyWOkreguSrednia'][party_name]:4.1f} ± {o['odchylenieWOkregu'][party_name]*2:3.1f}\n"
     markdown += f"```\n"
 
     # create sims
@@ -104,7 +104,7 @@ for okreg_name, o in data.items():
         sims.append(
             np.random.normal(
                 loc=o["procentyWOkreguSrednia"][party_name],
-                scale=o["odchylenieWOkregu"][party_name]/2,
+                scale=o["odchylenieWOkregu"][party_name]*2,
                 size=n_sim,
             )
         )
@@ -141,7 +141,7 @@ for okreg_name, o in data.items():
         # also print a black line at 0
         axs[i].axhline(0, color="black")
 
-    plot_filename = f"plots/{okreg_name.replace(' ', '_')}_half.png"
+    plot_filename = f"plots/{okreg_name.replace(' ', '_')}_double.png"
     plt.savefig(plot_filename)
 
     markdown += f"![]({plot_filename})\n\n"
@@ -163,7 +163,7 @@ Nie biorę więc tu poprawki na liczbę głosów w danym okręgu, ale są to ma�
 
 # %%
 # save markdown
-filename = "half.md"
+filename = "double.md"
 
 with open(filename, "w") as f:
     f.write(markdown)
