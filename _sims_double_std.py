@@ -58,33 +58,12 @@ def get_avg_mandate_assignments(unnormalized_sims, num_mandates):
 
 
 # %%
-max_val = 0.044
+max_val = 0.085
 plt.ioff()
-# max_val_total = 0
+max_val_total = 0
 
 markdown = """
-# Wzmocnij swój głos
-
-Jak głos oddany na daną partę wpływa na przydział mandatów w okręgu:
-
-Dla każdego okręgu przeprowadzane jest 10000 symulacji, losując wyniki
-wg podanych średnich i odchyleń standardowych.
-
-Następnie dla każdej sytuacji porównujemy wariant gdzie głosujemy na
-partię X z wariantem gdzie nie głosujemy na nic.
-
-Na wykresach pokazana jest wartość oczekiwana tego jak głos wpłynie
-na przydział mandatów w okręgu, wyliczona jako średnia z 10000 symulacji.
-
-Dane wzięte z:
-[pogonimypis.pl](https://pogonimypis.pl/) (A dokładnie [stąd](https://github.com/krozkwitalski/wybory/blob/master/symulacja.ts).)
-
-Uwaga: w analizach dla uproszczenia nie uwzględniam możliwości, że TD nie przeskakuje
-progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sejmu.
-
-Uwaga2: wyniki zależą od tego jakie odchylenie standardowe przyjmujemy dla poparcia
-partii. [Tutaj](half.md) alternatywne wyniki, gdy przyjmiemy 2x mniejsze odchylenie.
-[Tutaj](double.md) gdy 2x większe.
+# Podwojona niepewność co do poparcia w okręgach
 """
 
 for okreg_name, o in data.items():
@@ -95,7 +74,7 @@ for okreg_name, o in data.items():
 
     markdown += f"```\n"
     for party_name in party_names:
-        markdown += f"{party_name:6}  {o['procentyWOkreguSrednia'][party_name]:4.1f} ± {o['odchylenieWOkregu'][party_name]:3.1f}\n"
+        markdown += f"{party_name:6}  {o['procentyWOkreguSrednia'][party_name]:4.1f} ± {o['odchylenieWOkregu'][party_name]*2:3.1f}\n"
     markdown += f"```\n"
 
     # create sims
@@ -104,7 +83,7 @@ for okreg_name, o in data.items():
         sims.append(
             np.random.normal(
                 loc=o["procentyWOkreguSrednia"][party_name],
-                scale=o["odchylenieWOkregu"][party_name],
+                scale=o["odchylenieWOkregu"][party_name] * 2,
                 size=n_sim,
             )
         )
@@ -130,9 +109,9 @@ for okreg_name, o in data.items():
     # global title is okreg name
     fig.suptitle(okreg_name)
 
-    # # use common scale for all plots, symmetrical
-    # local_max_val = max(abs(change).max() for change in changes.values())
-    # max_val_total = max(max_val_total, local_max_val)
+    # use common scale for all plots, symmetrical
+    local_max_val = max(abs(change).max() for change in changes.values())
+    max_val_total = max(max_val_total, local_max_val)
 
     for i, (party_name, change) in enumerate(changes.items()):
         axs[i].bar(party_names, change, color=party_colors)
@@ -141,32 +120,18 @@ for okreg_name, o in data.items():
         # also print a black line at 0
         axs[i].axhline(0, color="black")
 
-    plot_filename = f"plots/{okreg_name.replace(' ', '_')}.png"
+    plot_filename = f"plots/{okreg_name.replace(' ', '_')}_double.png"
     plt.savefig(plot_filename)
 
     markdown += f"![]({plot_filename})\n\n"
 
 
-markdown += """
-# Appendix
-
-Jeden głos rzadko kiedy zmienia przydział mandatów. Dlatego żeby zmniejszyć konieczną
-liczbę symulacji, zamiast jednego głosu oddanego na partię X, dodaje jej
-̣0.1 punkta procentowego do poparcia w okręgu.
-
-Nie wygląda żeby było to za dużo, bo gdy zmieniłem tą liczbę na 0.01, to wyniki
-nie zmieniły się znacząco.
-
-Nie biorę więc tu poprawki na liczbę głosów w danym okręgu, ale są to małe różnice.
-"""
-
-
 # %%
 # save markdown
-filename = "README.md"
+filename = "double.md"
 
 with open(filename, "w") as f:
     f.write(markdown)
 
 
-# print(max_val_total)
+print(max_val_total)
