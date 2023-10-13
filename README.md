@@ -13,7 +13,7 @@ Na wykresach pokazana jest wartość oczekiwana tego jak głos wpłynie
 na przydział mandatów w okręgu, wyliczona jako średnia z 10000 symulacji.
 
 Dane wzięte z:
-[pogonimypis.pl](https://pogonimypis.pl/) (A dokładnie [stąd](https://github.com/krozkwitalski/wybory/blob/master/symulacja.ts).)
+[pogonimypis.pl](https://pogonimypis.pl/).
 
 Uwaga: w analizach dla uproszczenia nie uwzględniam możliwości, że TD nie przeskakuje
 progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sejmu.
