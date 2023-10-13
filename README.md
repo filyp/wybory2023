@@ -20,7 +20,10 @@ progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sej
 
 Uwaga2: wyniki zależą od tego jakie odchylenie standardowe przyjmujemy dla poparcia
 partii. [Tutaj](half.md) alternatywne wyniki, gdy przyjmiemy 2x mniejsze odchylenie.
-[Tutaj](double.md) gdy 2x większe.
+[Tutaj](double.md) gdy 2x większe. W skrócie, jeśli uważasz, że niepewność co do
+poparcia jest większa niż tu przyjęta, to bardziej warto głosowac na ulubioną partię
+a nie strategicznie.
+
 ## Legnica
 ```
 PIS     38.8 ± 1.2

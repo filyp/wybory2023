@@ -1,26 +1,6 @@
 
-# Wzmocnij swój głos
+# Podwojona niepewność co do poparcia w okręgach
 
-Jak głos oddany na pewną partę wpływa na przydział mandatów w okręgu.
-
-Dla każdego okręgu przeprowadzane jest 10000 symulacji, losując wyniki
-wg podanych średnich i odchyleń standardowych.
-
-Następnie dla każdej sytuacji porównujemy wariant gdzie głosujemy na
-partię X z wariantem gdzie nie głosujemy na nic.
-
-Na wykresach pokazana jest wartość oczekiwana tego jak głos wpłynie
-na przydział mandatów w okręgu, wyliczona jako średnia z 10000 symulacji.
-
-Dane wzięte z:
-[pogonimypis.pl](https://pogonimypis.pl/) (A dokładnie [stąd](https://github.com/krozkwitalski/wybory/blob/master/symulacja.ts).)
-
-Uwaga: w analizach dla uproszczenia nie uwzględniam możliwości, że TD nie przeskakuje
-progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sejmu.
-
-Uwaga2: wyniki zależą od tego jakie odchylenie standardowe przyjmujemy dla poparcia
-partii. [Tutaj](half.md) alternatywne wyniki, gdy przyjmiemy 2x mniejsze odchylenie.
-[Tutaj](double.md) gdy 2x większe.
 ## Legnica
 ```
 PIS     38.8 ± 2.4

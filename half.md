@@ -1,26 +1,5 @@
 
-# Wzmocnij swój głos
-
-Jak głos oddany na pewną partę wpływa na przydział mandatów w okręgu.
-
-Dla każdego okręgu przeprowadzane jest 10000 symulacji, losując wyniki
-wg podanych średnich i odchyleń standardowych.
-
-Następnie dla każdej sytuacji porównujemy wariant gdzie głosujemy na
-partię X z wariantem gdzie nie głosujemy na nic.
-
-Na wykresach pokazana jest wartość oczekiwana tego jak głos wpłynie
-na przydział mandatów w okręgu, wyliczona jako średnia z 10000 symulacji.
-
-Dane wzięte z:
-[pogonimypis.pl](https://pogonimypis.pl/) (A dokładnie [stąd](https://github.com/krozkwitalski/wybory/blob/master/symulacja.ts).)
-
-Uwaga: w analizach dla uproszczenia nie uwzględniam możliwości, że TD nie przeskakuje
-progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sejmu.
-
-Uwaga2: wyniki zależą od tego jakie odchylenie standardowe przyjmujemy dla poparcia
-partii. [Tutaj](half.md) alternatywne wyniki, gdy przyjmiemy 2x mniejsze odchylenie.
-[Tutaj](double.md) gdy 2x większe.
+# Dwa razy mniejsza niepewność co do poparcia w okręgach
 ## Legnica
 ```
 PIS     38.8 ± 0.6
@@ -431,14 +410,3 @@ LEWICA  11.9 ± 0.5
 ```
 ![](plots/Szczecin_half.png)
 
-
-# Appendix
-
-Jeden głos rzadko kiedy zmienia przydział mandatów. Dlatego żeby zmniejszyć konieczną
-liczbę symulacji, zamiast jednego głosu oddanego na partię X, dodaje jej
-̣0.1 punkta procentowego do poparcia w okręgu.
-
-Nie wygląda żeby było to za dużo, bo gdy zmieniłem tą liczbę na 0.01, to wyniki
-nie zmieniły się znacząco.
-
-Nie biorę więc tu poprawki na liczbę głosów w danym okręgu, ale są to małe różnice.
