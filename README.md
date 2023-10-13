@@ -22,7 +22,7 @@ LEWICA  13.6 +- 1.4
 ```
 ![](plots/Legnica.png)
 
-## Walbrzych
+## Wałbrzych
 ```
 PIS     35.8 +- 2.0
 KONF     7.3 +- 0.7
@@ -30,9 +30,9 @@ KO      37.5 +- 3.5
 TD       8.9 +- 1.6
 LEWICA  10.4 +- 1.1
 ```
-![](plots/Walbrzych.png)
+![](plots/Wałbrzych.png)
 
-## Wroclaw
+## Wrocław
 ```
 PIS     29.9 +- 2.3
 KONF     9.4 +- 1.4
@@ -40,7 +40,7 @@ KO      37.4 +- 1.7
 TD       8.8 +- 1.6
 LEWICA  14.6 +- 2.4
 ```
-![](plots/Wroclaw.png)
+![](plots/Wrocław.png)
 
 ## Bydgoszcz
 ```
@@ -52,7 +52,7 @@ LEWICA  12.8 +- 2.0
 ```
 ![](plots/Bydgoszcz.png)
 
-## Torun
+## Toruń
 ```
 PIS     36.0 +- 1.6
 KONF     8.7 +- 1.5
@@ -60,7 +60,7 @@ KO      30.5 +- 3.6
 TD      11.7 +- 1.6
 LEWICA  13.1 +- 1.8
 ```
-![](plots/Torun.png)
+![](plots/Toruń.png)
 
 ## Lublin
 ```
@@ -72,7 +72,7 @@ LEWICA   6.6 +- 0.9
 ```
 ![](plots/Lublin.png)
 
-## Chelm
+## Chełm
 ```
 PIS     54.7 +- 9.2
 KONF    11.2 +- 4.2
@@ -80,7 +80,7 @@ KO      18.1 +- 1.4
 TD      10.4 +- 1.6
 LEWICA   5.4 +- 1.8
 ```
-![](plots/Chelm.png)
+![](plots/Chełm.png)
 
 ## Zielona Góra
 ```
@@ -90,9 +90,9 @@ KO      35.3 +- 2.2
 TD      13.3 +- 1.6
 LEWICA  13.2 +- 0.9
 ```
-![](plots/Zielona Góra.png)
+![](plots/Zielona_Góra.png)
 
-## Lodz
+## Lódź
 ```
 PIS     26.7 +- 2.4
 KONF     7.0 +- 0.7
@@ -100,7 +100,7 @@ KO      40.8 +- 4.2
 TD       7.6 +- 1.6
 LEWICA  17.9 +- 1.8
 ```
-![](plots/Lodz.png)
+![](plots/Lódź.png)
 
 ## Piotrków Trybunalski
 ```
@@ -110,7 +110,7 @@ KO      18.6 +- 1.3
 TD      10.3 +- 1.6
 LEWICA   9.3 +- 1.0
 ```
-![](plots/Piotrków Trybunalski.png)
+![](plots/Piotrków_Trybunalski.png)
 
 ## Sieradz
 ```
@@ -122,7 +122,7 @@ LEWICA  10.6 +- 1.5
 ```
 ![](plots/Sieradz.png)
 
-## Chrzanow
+## Chrzanów
 ```
 PIS     47.1 +- 1.3
 KONF    11.0 +- 2.3
@@ -130,9 +130,9 @@ KO      26.1 +- 1.2
 TD       8.9 +- 1.6
 LEWICA   6.9 +- 0.8
 ```
-![](plots/Chrzanow.png)
+![](plots/Chrzanów.png)
 
-## Krakow
+## Kraków
 ```
 PIS     34.1 +- 6.8
 KONF     9.4 +- 2.8
@@ -140,7 +140,7 @@ KO      34.8 +- 2.8
 TD       9.4 +- 1.6
 LEWICA  12.3 +- 1.7
 ```
-![](plots/Krakow.png)
+![](plots/Kraków.png)
 
 ## Nowy Sącz
 ```
@@ -150,9 +150,9 @@ KO      15.2 +- 4.9
 TD       7.7 +- 1.6
 LEWICA   5.2 +- 0.9
 ```
-![](plots/Nowy Sącz.png)
+![](plots/Nowy_Sącz.png)
 
-## Tarnow
+## Tarnów
 ```
 PIS     55.1 +- 3.0
 KONF    11.9 +- 2.8
@@ -160,9 +160,9 @@ KO      15.4 +- 4.3
 TD      12.7 +- 1.6
 LEWICA   4.8 +- 0.9
 ```
-![](plots/Tarnow.png)
+![](plots/Tarnów.png)
 
-## Plock
+## Płock
 ```
 PIS     50.0 +- 4.6
 KONF     8.8 +- 0.7
@@ -170,7 +170,7 @@ KO      20.1 +- 1.9
 TD      13.1 +- 1.6
 LEWICA   8.0 +- 1.7
 ```
-![](plots/Plock.png)
+![](plots/Płock.png)
 
 ## Radom
 ```
@@ -200,7 +200,7 @@ KO      48.1 +- 4.7
 TD       7.2 +- 1.6
 LEWICA  16.4 +- 2.3
 ```
-![](plots/Warszawa I.png)
+![](plots/Warszawa_I.png)
 
 ## Warszawa II
 ```
@@ -210,7 +210,7 @@ KO      33.8 +- 1.8
 TD      10.2 +- 1.6
 LEWICA  12.4 +- 2.0
 ```
-![](plots/Warszawa II.png)
+![](plots/Warszawa_II.png)
 
 ## Opole
 ```
@@ -232,7 +232,7 @@ LEWICA   4.7 +- 1.5
 ```
 ![](plots/Krosno.png)
 
-## Rzeszow
+## Rzeszów
 ```
 PIS     55.7 +- 3.0
 KONF    14.4 +- 2.7
@@ -240,9 +240,9 @@ KO      16.5 +- 2.3
 TD       7.9 +- 1.6
 LEWICA   5.5 +- 0.8
 ```
-![](plots/Rzeszow.png)
+![](plots/Rzeszów.png)
 
-## Bialystok
+## Białystok
 ```
 PIS     45.9 +- 2.8
 KONF    11.2 +- 2.1
@@ -250,9 +250,9 @@ KO      24.5 +- 2.1
 TD      11.6 +- 1.6
 LEWICA   6.8 +- 1.9
 ```
-![](plots/Bialystok.png)
+![](plots/Białystok.png)
 
-## Gdansk
+## Gdańsk
 ```
 PIS     25.7 +- 3.2
 KONF     7.9 +- 1.8
@@ -260,7 +260,7 @@ KO      46.2 +- 4.3
 TD       8.6 +- 1.6
 LEWICA  11.7 +- 1.4
 ```
-![](plots/Gdansk.png)
+![](plots/Gdańsk.png)
 
 ## Gdynia
 ```
@@ -282,7 +282,7 @@ LEWICA  10.1 +- 0.9
 ```
 ![](plots/Bielsko-Biała.png)
 
-## Czestochowa
+## Częstochowa
 ```
 PIS     40.6 +- 1.8
 KONF     8.7 +- 1.9
@@ -290,7 +290,7 @@ KO      26.3 +- 2.6
 TD      10.3 +- 1.6
 LEWICA  14.1 +- 2.2
 ```
-![](plots/Czestochowa.png)
+![](plots/Częstochowa.png)
 
 ## Gliwice
 ```
@@ -342,7 +342,7 @@ LEWICA   8.1 +- 1.6
 ```
 ![](plots/Kielce.png)
 
-## Elblag
+## Elbląg
 ```
 PIS     37.1 +- 2.8
 KONF     8.2 +- 1.8
@@ -350,7 +350,7 @@ KO      33.3 +- 3.4
 TD      11.3 +- 1.6
 LEWICA  10.1 +- 1.2
 ```
-![](plots/Elblag.png)
+![](plots/Elbląg.png)
 
 ## Olsztyn
 ```
@@ -392,7 +392,7 @@ LEWICA  10.3 +- 1.9
 ```
 ![](plots/Piła.png)
 
-## Poznan
+## Poznań
 ```
 PIS     20.1 +- 5.6
 KONF     6.9 +- 1.7
@@ -400,7 +400,7 @@ KO      50.0 +- 3.5
 TD       9.3 +- 1.6
 LEWICA  13.7 +- 1.7
 ```
-![](plots/Poznan.png)
+![](plots/Poznań.png)
 
 ## Koszalin
 ```

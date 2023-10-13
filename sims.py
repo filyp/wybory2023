@@ -58,7 +58,7 @@ def get_avg_mandate_assignments(unnormalized_sims, num_mandates):
 
 
 # %%
-max_val = 0.042
+max_val = 0.044
 plt.ioff()
 # max_val_total = 0
 
@@ -132,7 +132,7 @@ for okreg_name, o in data.items():
         # also print a black line at 0
         axs[i].axhline(0, color="black")
 
-    plot_filename = f"plots/{okreg_name}.png"
+    plot_filename = f"plots/{okreg_name.replace(' ', '_')}.png"
     plt.savefig(plot_filename)
 
     markdown += f"![]({plot_filename})\n\n"
