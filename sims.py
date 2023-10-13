@@ -63,6 +63,8 @@ plt.ioff()
 # max_val_total = 0
 
 markdown = """
+# Wzmocnij swój głos
+
 Jak głos oddany na pewną partę wpływa na przydział mandatów w okręgu.
 
 Dla każdego okręgu przeprowadzane jest 10000 symulacji, losując wyniki
@@ -86,7 +88,7 @@ for okreg_name, o in data.items():
 
     markdown += f"```\n"
     for party_name in party_names:
-        markdown += f"{party_name:6}  {o['procentyWOkreguSrednia'][party_name]:4.1f} +- {o['odchylenieWOkregu'][party_name]:3.1f}\n"
+        markdown += f"{party_name:6}  {o['procentyWOkreguSrednia'][party_name]:4.1f} ± {o['odchylenieWOkregu'][party_name]:3.1f}\n"
     markdown += f"```\n"
 
     # create sims
@@ -147,3 +149,15 @@ with open(filename, "w") as f:
 
 
 # print(max_val_total)
+
+
+markdown += """
+# Appendix
+
+Jeden głos rzadko kiedy zmienia przydział mandatów. Dlatego żeby zmniejszyć konieczną
+liczbę symulacji, zamiast jednego głosu oddanego na partię X, dodaje jej
+̣0.1 punkta procentowego do poparcia w okręgu.
+
+Nie wygląda żeby było to za dużo, bo gdy zmieniłem tą liczbę na 0.01, to wyniki
+nie zmieniły się znacząco.
+"""
