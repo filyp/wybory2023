@@ -78,6 +78,13 @@ na przydział mandatów w okręgu, wyliczona jako średnia z 10000 symulacji.
 
 Dane wzięte z:
 [pogonimypis.pl](https://pogonimypis.pl/) (A dokładnie [stąd](https://github.com/krozkwitalski/wybory/blob/master/symulacja.ts).)
+
+Uwaga: w analizach dla uproszczenia nie uwzględniam możliwości, że TD nie przeskakuje
+progu wyborczego. W wynikach zakładam, że wszystkie te 5 partii wchodzi do sejmu.
+
+Uwaga2: wyniki zależą od tego jakie odchylenie standardowe przyjmujemy dla poparcia
+partii. [Tutaj](half.md) alternatywne wyniki, gdy przyjmiemy 2x mniejsze odchylenie.
+[Tutaj](double.md) gdy 2x większe.
 """
 
 for okreg_name, o in data.items():
@@ -140,17 +147,6 @@ for okreg_name, o in data.items():
     markdown += f"![]({plot_filename})\n\n"
 
 
-# %%
-# save markdown
-filename = "README.md"
-
-with open(filename, "w") as f:
-    f.write(markdown)
-
-
-# print(max_val_total)
-
-
 markdown += """
 # Appendix
 
@@ -160,4 +156,17 @@ liczbę symulacji, zamiast jednego głosu oddanego na partię X, dodaje jej
 
 Nie wygląda żeby było to za dużo, bo gdy zmieniłem tą liczbę na 0.01, to wyniki
 nie zmieniły się znacząco.
+
+Nie biorę więc tu poprawki na liczbę głosów w danym okręgu, ale są to małe różnice.
 """
+
+
+# %%
+# save markdown
+filename = "README.md"
+
+with open(filename, "w") as f:
+    f.write(markdown)
+
+
+# print(max_val_total)
